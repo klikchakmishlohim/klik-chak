@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>קליק צ'אק משלוחים | חברת משלוחים והובלות קטנות</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="קליק צ'אק משלוחים – חברת משלוחים והובלות קטנות לעסקים ולפרטיים. שירות מקצועי, זמינות גבוהה, ווואטסאפ ישיר למשלוחים ולהובלות." />
+  <meta name="description" content="קליק צ'אק משלוחים – חברת משלוחים והובלות קטנות לעסקים ולפרטיים. שירות מקצועי, זמינות גבוהה, וואטסאפ ישיר למשלוחים ולהובלות." />
 
   <link href="https://fonts.googleapis.com/css2?family=Alef:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -38,7 +38,6 @@
       overflow-x: hidden;
     }
 
-    /* Animated Background */
     .page {
       min-height: 100vh;
       background: 
@@ -55,7 +54,6 @@
       50% { background-position: 100% 100%, 0% 0%, 50% 50%; }
     }
 
-    /* Header */
     header {
       position: sticky;
       top: 0;
@@ -127,23 +125,25 @@
     }
 
     .cta-btn {
-      background: linear-gradient(135deg, var(--accent), #fb923c);
+      background: linear-gradient(135deg, var(--success), #16a34a);
       color: white;
       padding: 0.75rem 1.5rem;
       border-radius: 12px;
       font-weight: 800;
       border: none;
       cursor: pointer;
-      box-shadow: var(--glow-orange), 0 4px 15px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0 20px rgba(34, 197, 94, 0.4), 0 4px 15px rgba(0, 0, 0, 0.3);
       transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
     .cta-btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 0 30px var(--accent-glow), 0 8px 25px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 30px rgba(34, 197, 94, 0.6), 0 8px 25px rgba(0, 0, 0, 0.4);
     }
 
-    /* Hero Section */
     .hero {
       padding: 4rem 1.5rem;
       max-width: 1200px;
@@ -234,7 +234,6 @@
       box-shadow: var(--glow-cyan);
     }
 
-    /* AI Agent Card */
     .ai-card {
       background: linear-gradient(135deg, rgba(2, 6, 23, 0.9), rgba(15, 23, 42, 0.9));
       border: 2px solid var(--primary);
@@ -352,7 +351,8 @@
     }
 
     .form-field input,
-    .form-field select {
+    .form-field select,
+    .form-field textarea {
       padding: 0.75rem;
       background: rgba(0, 0, 0, 0.5);
       border: 1px solid var(--border);
@@ -363,15 +363,18 @@
       width: 100%;
       text-align: right;
       direction: rtl;
+      font-family: inherit;
     }
 
-    .form-field input::placeholder {
+    .form-field input::placeholder,
+    .form-field textarea::placeholder {
       text-align: right;
       direction: rtl;
     }
 
     .form-field input:focus,
-    .form-field select:focus {
+    .form-field select:focus,
+    .form-field textarea:focus {
       outline: none;
       border-color: var(--primary);
       box-shadow: 0 0 15px var(--primary-glow);
@@ -419,7 +422,6 @@
       box-shadow: 0 0 30px rgba(34, 197, 94, 0.4);
     }
 
-    /* Contact Section */
     .contact-section {
       padding: 4rem 1.5rem;
       max-width: 1200px;
@@ -511,7 +513,6 @@
       background: var(--primary);
     }
 
-    /* Lead Form */
     .lead-form-section {
       background: linear-gradient(135deg, rgba(2, 6, 23, 0.95), rgba(15, 23, 42, 0.95));
       border: 2px solid var(--primary);
@@ -557,6 +558,25 @@
       color: var(--text-muted);
       border-top: 1px solid var(--border);
       margin-top: 4rem;
+    }
+
+    .footer-links {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+      text-decoration: underline;
     }
 
     @media (max-width: 968px) {
@@ -606,6 +626,39 @@
       border: 1px solid #ef4444;
       color: #ef4444;
     }
+
+    .terms-content {
+      background: linear-gradient(135deg, rgba(2,6,23,0.95), rgba(15,23,42,0.95));
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    .terms-content h3 {
+      color: var(--primary);
+      margin: 2rem 0 1rem;
+      font-size: 1.3rem;
+    }
+
+    .terms-content h3:first-of-type {
+      margin-top: 0;
+    }
+
+    .terms-content ul {
+      margin: 1rem 0 2rem 2rem;
+      list-style: disc;
+    }
+
+    .terms-content li {
+      margin-bottom: 0.5rem;
+    }
+
+    .terms-content strong {
+      color: var(--text-light);
+    }
   </style>
 </head>
 
@@ -620,8 +673,9 @@
         <nav>
           <a href="#how" class="hide-mobile">איך זה עובד</a>
           <a href="#contact" class="hide-mobile">יצירת קשר</a>
-          <button class="cta-btn" onclick="document.getElementById('lead-form').scrollIntoView({behavior:'smooth'})">
-            קבלת הצעת מחיר
+          <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+            <i class="fab fa-whatsapp"></i>
+            פנייה מהירה בWhatsApp
           </button>
         </nav>
       </div>
@@ -632,11 +686,11 @@
         <div class="hero-content">
           <h1>חברת משלוחים והובלות קטנות<br>ששומר על השם הטוב של העסק שלך</h1>
           <p class="hero-lead">
-            משלוחים יומיומיים והובלות קטנות לעסקים ולפרטיים – עם שליחים ומובילים שמבינים
-            שהם החוליה האחרונה מול הלקוח שלך.
+            משלוחים יומיומיים והובלות קטנות לעסקים ולפרטיים – עם שליחים ומובילים שמגינים
+            שדה החוליה האחרונה מול הלקוח שלך.
           </p>
           <p class="hero-highlight">
-            💡 גם סוכן AI שעוזר למלא פרטים מהר, וגם מענה אנושי בווואטסאפ ובטלפון כשצריך לדבר עם בן אדם.
+            💡 בנוסף AI שעוזר למלא פרטים מהר, ובנוסף אנשים בוואטסאפ ובטלפון כשצריך לדבר עם בן אדם.
           </p>
 
           <div class="hero-actions">
@@ -664,8 +718,24 @@
               <button class="ai-tab" data-mode="moving">הובלות קטנות</button>
             </div>
 
-            <div id="delivery-panel">
+           <div id="delivery-panel">
               <div class="form-grid">
+
+                <div class="form-field">
+                  <label>שם איש קשר *</label>
+                  <input id="mini-name-del" type="text" placeholder="שם מלא" required />
+                </div>
+
+                <div class="form-field">
+                  <label>טלפון *</label>
+                  <input id="mini-phone-del" type="tel" placeholder="טלפון לחזרה" required />
+                </div>
+
+                <div class="form-field">
+                  <label>אימייל (אופציונלי)</label>
+                  <input id="mini-email-del" type="email" placeholder="דוא״ל" />
+                </div>
+
                 <div class="form-field">
                   <label>סוג העסק</label>
                   <select id="mini-type">
@@ -677,7 +747,7 @@
                   </select>
                 </div>
 
-                <div class="form-field">
+                <div class="form-field full-width">
                   <label>נפח משלוחים יומי</label>
                   <select id="mini-volume">
                     <option>חד פעמי</option>
@@ -689,25 +759,28 @@
                 </div>
 
                 <div class="form-field">
-                  <label>יעד איסוף</label>
-                  <input id="mini-pickup-city" type="text" placeholder="עיר / אזור איסוף" />
+                  <label>עיר מוצא</label>
+                  <input id="mini-pickup-city" type="text" placeholder="עיר איסוף" />
                 </div>
 
                 <div class="form-field">
-                  <label>יעד מסירה</label>
-                  <input id="mini-drop-city" type="text" placeholder="עיר / אזור מסירה" />
+                  <label>רחוב (מוצא)</label>
+                  <input id="mini-pickup-street" type="text" placeholder="רחוב" />
+                </div>
+
+                <div class="form-field">
+                  <label>מספר כתובת (מוצא)</label>
+                  <input id="mini-pickup-number" type="text" placeholder="מספר בית" />
+                </div>
+
+                <div class="form-field">
+                  <label>מספר דירה (מוצא)</label>
+                  <input id="mini-pickup-apt" type="text" placeholder="מספר דירה" />
                 </div>
 
                 <div class="form-field">
                   <label>קומה (איסוף)</label>
                   <select id="mini-pickup-floor">
-                    <option>קרקע</option><option>1</option><option>2</option><option>3</option><option>4+</option>
-                  </select>
-                </div>
-
-                <div class="form-field">
-                  <label>קומה (מסירה)</label>
-                  <select id="mini-drop-floor">
                     <option>קרקע</option><option>1</option><option>2</option><option>3</option><option>4+</option>
                   </select>
                 </div>
@@ -720,26 +793,65 @@
                 </div>
 
                 <div class="form-field">
+                  <label>עיר יעד</label>
+                  <input id="mini-drop-city" type="text" placeholder="עיר מסירה" />
+                </div>
+
+                <div class="form-field">
+                  <label>רחוב (יעד)</label>
+                  <input id="mini-drop-street" type="text" placeholder="רחוב" />
+                </div>
+
+                <div class="form-field">
+                  <label>מספר כתובת (יעד)</label>
+                  <input id="mini-drop-number" type="text" placeholder="מספר בית" />
+                </div>
+
+                <div class="form-field">
+                  <label>מספר דירה (יעד)</label>
+                  <input id="mini-drop-apt" type="text" placeholder="מספר דירה" />
+                </div>
+
+                <div class="form-field">
+                  <label>קומה (מסירה)</label>
+                  <select id="mini-drop-floor">
+                    <option>קרקע</option><option>1</option><option>2</option><option>3</option><option>4+</option>
+                  </select>
+                </div>
+
+                <div class="form-field">
                   <label>מעלית (מסירה)</label>
                   <select id="mini-drop-elevator">
                     <option>יש</option><option>אין</option>
                   </select>
                 </div>
 
-                <div class="form-field">
-                  <label>טלפון</label>
-                  <input id="mini-phone-del" type="tel" placeholder="טלפון לחזרה" />
+                <div class="form-field full-width">
+                  <label>הערות</label>
+                  <input id="mini-notes-del" type="text" placeholder="שעות נוחות, דגשים, פרטים נוספים..." />
                 </div>
 
-                <div class="form-field">
-                  <label>הערות</label>
-                  <input id="mini-notes-del" type="text" placeholder="שעות נוחות, דגשים..." />
-                </div>
               </div>
             </div>
 
+
             <div id="moving-panel" hidden>
               <div class="form-grid">
+                <div class="form-field">
+                  <label>שם איש קשר *</label>
+                  <input id="mini-name-move" type="text" placeholder="שם מלא" required />
+                </div>
+
+                <div class="form-field">
+                  <label>טלפון *</label>
+                  <input id="mini-phone-move" type="tel" placeholder="טלפון לחזרה" required />
+                </div>
+
+                <div class="form-field">
+                  <label>אימייל (אופציונלי)</label>
+                  <input id="mini-email-move" type="email" placeholder="דוא״ל" />
+                </div>
+
                 <div class="form-field">
                   <label>סוג לקוח</label>
                   <select id="mini-client-move">
@@ -750,14 +862,14 @@
                 <div class="form-field">
                   <label>נפח (גודל ההובלה)</label>
                   <select id="mini-volume-move">
-                    <option>אחר</option><option>נפח קטן (מעטפה וכדו')</option><option>נפח בינוני(ארגז וכד')</option><option>נפח גדול(מקרר וכד')</option>
+                    <option>נפח קטן (מעטפה וכדו')</option><option>נפח בינוני (ארגז וכד')</option><option>נפח גדול (מקרר וכד')</option><option>אחר</option>
                   </select>
                 </div>
 
                 <div class="form-field">
                   <label>סוג מוצר</label>
                   <select id="mini-product-move">
-                    <option>רהיט קטן / כיסאות</option><option>ארגזים / קרטונים</option><option>ציוד משרדי</option><option>ציוד רגיש / מדידה</option><option>אחר</option>
+                    <option>רהיט קטן / כיסאות</option><option>ארגזים / קרטונים</option><option>ציוד משרדי</option><option>ציוד רגיש / מהידה</option><option>אחר</option>
                   </select>
                 </div>
 
@@ -769,25 +881,28 @@
                 </div>
 
                 <div class="form-field">
-                  <label>יעד איסוף</label>
-                  <input id="mini-move-pickup-city" type="text" placeholder="עיר / כתובת איסוף" />
+                  <label>עיר מוצא</label>
+                  <input id="mini-move-pickup-city" type="text" placeholder="עיר איסוף" />
                 </div>
 
                 <div class="form-field">
-                  <label>יעד מסירה</label>
-                  <input id="mini-move-drop-city" type="text" placeholder="עיר / כתובת מסירה" />
+                  <label>רחוב</label>
+                  <input id="mini-move-pickup-street" type="text" placeholder="רחוב" />
+                </div>
+
+                <div class="form-field">
+                  <label>מספר כתובת</label>
+                  <input id="mini-move-pickup-number" type="text" placeholder="מספר בית" />
+                </div>
+
+                <div class="form-field">
+                  <label>מספר דירה</label>
+                  <input id="mini-move-pickup-apt" type="text" placeholder="מספר דירה" />
                 </div>
 
                 <div class="form-field">
                   <label>קומה (איסוף)</label>
                   <select id="mini-move-pickup-floor">
-                    <option>קרקע</option><option>1</option><option>2</option><option>3</option><option>4+</option>
-                  </select>
-                </div>
-
-                <div class="form-field">
-                  <label>קומה (מסירה)</label>
-                  <select id="mini-move-drop-floor">
                     <option>קרקע</option><option>1</option><option>2</option><option>3</option><option>4+</option>
                   </select>
                 </div>
@@ -800,34 +915,57 @@
                 </div>
 
                 <div class="form-field">
+                  <label>עיר יעד</label>
+                  <input id="mini-move-drop-city" type="text" placeholder="עיר מסירה" />
+                </div>
+
+                <div class="form-field">
+                  <label>רחוב</label>
+                  <input id="mini-move-drop-street" type="text" placeholder="רחוב" />
+                </div>
+
+                <div class="form-field">
+                  <label>מספר כתובת</label>
+                  <input id="mini-move-drop-number" type="text" placeholder="מספר בית" />
+                </div>
+
+                <div class="form-field">
+                  <label>מספר דירה</label>
+                  <input id="mini-move-drop-apt" type="text" placeholder="מספר דירה" />
+                </div>
+
+                <div class="form-field">
+                  <label>קומה (מסירה)</label>
+                  <select id="mini-move-drop-floor">
+                    <option>קרקע</option><option>1</option><option>2</option><option>3</option><option>4+</option>
+                  </select>
+                </div>
+
+                <div class="form-field">
                   <label>מעלית (מסירה)</label>
                   <select id="mini-move-drop-elevator">
                     <option>יש</option><option>אין</option>
                   </select>
                 </div>
 
-                <div class="form-field">
-                  <label>טלפון</label>
-                  <input id="mini-phone-move" type="tel" placeholder="טלפון לחזרה" />
-                </div>
-
-                <div class="form-field">
+                <div class="form-field full-width">
                   <label>הערות</label>
                   <input id="mini-notes-move" type="text" placeholder="שעות נוחות, פירוק/הרכבה..." />
                 </div>
               </div>
             </div>
 
-                 <div class="consent-box full-width">
-                  <label style="display:flex; gap:10px; align-items:flex-start; cursor:pointer;">
-                  <input type="checkbox" id="mini-consent" style="margin-top:4px;">
-                  <span>אני מאשר/ת יצירת קשר בנוגע לפניה זו ומסכים/ה למדיניות הפרטיות.</span>
-                </label>
-              </div>
+            <div class="consent-box full-width">
+              <label style="display:flex; gap:10px; align-items:flex-start; cursor:pointer;">
+                <input type="checkbox" id="mini-consent" style="margin-top:4px;">
+                <span>אני מאשר/ת את <a href="#terms" onclick="document.getElementById('terms').scrollIntoView({behavior:'smooth'})">תקנון האתר</a> ו<a href="#privacy" onclick="document.getElementById('privacy').scrollIntoView({behavior:'smooth'})">מדיניות הפרטיות</a></span>
+              </label>
+            </div>
+
             <div class="submit-section">
               <button class="submit-btn" id="mini-submit">שליחה מהירה</button>
               <button class="wa-btn" onclick="openWhatsAppFromMini()">
-                <i class="fab fa-whatsapp"></i> פנייה מהירה בWhatsApp
+                <i class="fab fa-whatsapp"></i> פנייה מהירה ב-WhatsApp
               </button>
               <div id="mini-status"></div>
             </div>
@@ -844,7 +982,7 @@
         <div class="feature-box" style="background:linear-gradient(135deg, rgba(2,6,23,0.9), rgba(15,23,42,0.9)); border:1px solid var(--border); border-radius:16px; padding:2rem; transition:all 0.3s; position:relative; overflow:hidden;">
           <div style="position:absolute; top:0; left:0; right:0; height:120px; background:url('images/feature-reliable.jpg') center/cover; opacity:0.2;"></div>
           <div style="position:relative; z-index:1;">
-            <div style="font-size:3rem; margin-bottom:1rem;">✓</div>
+            <div style="font-size:3rem; margin-bottom:1rem;">✔</div>
             <h3 style="color:var(--primary); margin-bottom:1rem; font-size:1.3rem;">אמינות לפני הכל</h3>
             <p style="color:var(--text-muted); line-height:1.8;">חלונות זמן ברורים, עדכון על יציאה והגעה, ודיווח במקרה של עיכוב. אין נעלמים.</p>
           </div>
@@ -855,14 +993,14 @@
           <div style="position:relative; z-index:1;">
             <div style="font-size:3rem; margin-bottom:1rem;">⏱</div>
             <h3 style="color:var(--accent); margin-bottom:1rem; font-size:1.3rem;">זמינות גבוהה</h3>
-            <p style="color:var(--text-muted); line-height:1.8;">זמינות בשעות הליבה, כולל עומסים וקריאות הדחופות – בלי להישאר לבד ברגע האמת.</p>
+            <p style="color:var(--text-muted); line-height:1.8;">זמינות בשעות הליבה, כולל עומסים וקריאות דחופות – בלי להישאר לבד ברגע האמת.</p>
           </div>
         </div>
 
         <div class="feature-box" style="background:linear-gradient(135deg, rgba(2,6,23,0.9), rgba(15,23,42,0.9)); border:1px solid var(--border); border-radius:16px; padding:2rem; transition:all 0.3s; position:relative; overflow:hidden;">
           <div style="position:absolute; top:0; left:0; right:0; height:120px; background:url('images/feature-brand.jpg') center/cover; opacity:0.2;"></div>
           <div style="position:relative; z-index:1;">
-            <div style="font-size:3rem; margin-bottom:1rem;">💤</div>
+            <div style="font-size:3rem; margin-bottom:1rem;">👤</div>
             <h3 style="color:var(--success); margin-bottom:1rem; font-size:1.3rem;">בן אדם בצד השני</h3>
             <p style="color:var(--text-muted); line-height:1.8;">שיחה רגועה, הסבר ברור וטיפול בחריגות. לא עוד מערכת אטומה בלי תשובות.</p>
           </div>
@@ -881,7 +1019,7 @@
           <div style="position:absolute; top:0; left:0; right:0; height:120px; background:url('images/feature-paper.jpg') center/cover; opacity:0.2;"></div>
           <div style="position:relative; z-index:1;">
             <div style="font-size:3rem; margin-bottom:1rem;">🧾</div>
-            <h3 style="color:var(--accent); margin-bottom:1rem; font-size:1.3rem;">סדר ובגרות</h3>
+            <h3 style="color:var(--accent); margin-bottom:1rem; font-size:1.3rem;">סדר וגברות</h3>
             <p style="color:var(--text-muted); line-height:1.8;">מפרט שירות ברור, התאמות ללקוח עסקי/פרטי, ותיאום שמונע "אי הבנות".</p>
           </div>
         </div>
@@ -890,8 +1028,8 @@
           <div style="position:absolute; top:0; left:0; right:0; height:120px; background:url('images/feature-safe.jpg') center/cover; opacity:0.2;"></div>
           <div style="position:relative; z-index:1;">
             <div style="font-size:3rem; margin-bottom:1rem;">🛡</div>
-            <h3 style="color:var(--success); margin-bottom:1rem; font-size:1.3rem;">אחריות בשטח, כן השליח אחראי עד שהמוצר אצלך </h3>
-            <p style="color:var(--text-muted); line-height:1.8;">התנהלות זהירה, בטוחה נכונה, והגש על כבוד למותב וללקוח בקצה.</p>
+            <h3 style="color:var(--success); margin-bottom:1rem; font-size:1.3rem;">אחריות בשטח, כן השליח אחראי עד שהמוצר אצלך</h3>
+            <p style="color:var(--text-muted); line-height:1.8;">התנהלות זהירה, בטוחה נכונה, ודגש על כבוד למותג וללקוח בקצה.</p>
           </div>
         </div>
       </div>
@@ -930,7 +1068,7 @@
 
     <section class="contact-section">
       <h2 class="section-title">מה הלקוחות מספרים</h2>
-      <p class="section-subtitle">פחות הסברים, יותר ביצועים</p>
+      <p class="section-subtitle">פחות הסברי, יותר ביצועי</p>
 
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:2rem; margin-bottom:4rem;">
         <div style="background:linear-gradient(135deg, rgba(2,6,23,0.95), rgba(15,23,42,0.95)); border:1px solid var(--border); border-radius:20px; padding:2rem; box-shadow:0 10px 40px rgba(0,0,0,0.5);">
@@ -971,18 +1109,18 @@
 
       <div class="contact-grid">
         <div class="contact-card">
-          <h3>טלפון העסק</h3>
-          <a href="tel:+972546207111" class="contact-link">
+          <h3>WhatsApp טלפון העסק</h3>
+          <a href="https://wa.me/972546207111?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%91%D7%A9%D7%99%D7%A8%D7%95%D7%AA" target="_blank" rel="noopener noreferrer" class="contact-link">
             <span>054-6207111</span>
-            <div class="contact-icon phone">
-              <i class="fas fa-phone"></i>
+            <div class="contact-icon whatsapp">
+              <i class="fab fa-whatsapp"></i>
             </div>
           </a>
         </div>
 
         <div class="contact-card">
           <h3>whatsapp משלוחים</h3>
-          <a href="https://wa.me/972512040690?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%91%D7%A9%D7%99%D7%A8%D7%95%D7%AA%20%D7%9E%D7%A9%D7%9C%D7%95%D7%97%D7%99%D7%9D" target="_blank" class="contact-link">
+          <a href="https://wa.me/972512040690?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%91%D7%A9%D7%99%D7%A8%D7%95%D7%AA%20%D7%9E%D7%A9%D7%9C%D7%95%D7%97%D7%99%D7%9D" target="_blank" rel="noopener noreferrer" class="contact-link">
             <span>051-2040690</span>
             <div class="contact-icon whatsapp">
               <i class="fab fa-whatsapp"></i>
@@ -992,7 +1130,7 @@
 
         <div class="contact-card">
           <h3>whatsapp הובלות קטנות</h3>
-          <a href="https://wa.me/972547152150?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%A6%D7%A8%D7%99%D7%9A%2F%D7%A6%D7%A8%D7%99%D7%9B%D7%94%20%D7%94%D7%95%D7%91%D7%9C%D7%94%20%D7%A7%D7%98%D7%A0%D7%94" target="_blank" class="contact-link">
+          <a href="https://wa.me/972547152150?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%A6%D7%A8%D7%99%D7%9A%2F%D7%A6%D7%A8%D7%99%D7%9B%D7%94%20%D7%94%D7%95%D7%91%D7%9C%D7%94%20%D7%A7%D7%98%D7%A0%D7%94" target="_blank" rel="noopener noreferrer" class="contact-link">
             <span>054-7152150</span>
             <div class="contact-icon whatsapp">
               <i class="fab fa-whatsapp"></i>
@@ -1003,7 +1141,7 @@
         <div class="contact-card">
           <h3>מייל</h3>
           <a href="mailto:klikchak.mishlohim@gmail.com" class="contact-link">
-            <span>klikchak.mishlohim@</span>
+            <span>klikchak.mishlohim@gmail.com</span>
             <div class="contact-icon">
               <i class="fas fa-envelope"></i>
             </div>
@@ -1027,10 +1165,14 @@
               <input name="טלפון" type="tel" placeholder="טלפון לחזרה" required />
             </div>
 
-            <div class="form-field full-width">
+            <div class="form-field">
+              <label>אימייל (אופציונלי)</label>
+              <input name="אימייל" type="email" placeholder="דוא״ל" />
+            </div>
+
+            <div class="form-field">
               <label>סוג הפניה *</label>
               <select name="סוג_פניה" id="service" required>
-                <option value="">בחר...</option>
                 <option value="משלוחים">משלוחים</option>
                 <option value="הובלות קטנות">הובלות קטנות</option>
               </select>
@@ -1041,11 +1183,6 @@
               <input name="שם_העסק" type="text" placeholder="שם העסק / פרטי" />
             </div>
 
-            <div class="form-field full-width">
-              <label>עיר פעילות / אזור כללי</label>
-              <input name="עיר_פעילות" type="text" placeholder="לדוגמה: תל אביב, חיפה..." />
-            </div>
-
             <div class="form-field" id="panel-delivery">
               <label>סוג משלוח</label>
               <select name="סוג_משלוחים">
@@ -1054,7 +1191,7 @@
                 <option>פרחים / מתנות</option>
                 <option>חבילות / פריטים קטנים</option>
                 <option>מסמכים / מעטפות</option>
-                <option>ציוד / מדידה / מעבדה</option>
+                <option>ציוד / מהידה / מעבדה</option>
                 <option>אחר</option>
               </select>
             </div>
@@ -1078,7 +1215,7 @@
                 <option>רהיט קטן / כיסאות</option>
                 <option>ארגזים / קרטונים</option>
                 <option>ציוד משרדי</option>
-                <option>ציוד רגיש / מדידה</option>
+                <option>ציוד רגיש / מהידה</option>
                 <option>אחר</option>
               </select>
             </div>
@@ -1094,9 +1231,36 @@
               </select>
             </div>
 
-            <div class="form-field full-width">
-              <label>יעד איסוף</label>
-              <input name="יעד_איסוף" type="text" placeholder="עיר / כתובת איסוף" />
+            <div class="form-field" id="panel-moving-weight" hidden>
+              <label>משקל משוער</label>
+              <select name="משקל_משוער">
+                <option value="">בחר...</option>
+                <option>עד 20 ק"ג</option>
+                <option>20–80 ק"ג</option>
+                <option>80–150 ק"ג</option>
+                <option>מעל 150 ק"ג</option>
+              </select>
+            </div>
+
+            <!-- איסוף: עיר/רחוב/מספר/דירה -->
+            <div class="form-field">
+              <label>עיר מוצא</label>
+              <input name="עיר_מוצא" type="text" placeholder="עיר איסוף" />
+            </div>
+
+            <div class="form-field">
+              <label>רחוב (מוצא)</label>
+              <input name="רחוב_מוצא" type="text" placeholder="רחוב" />
+            </div>
+
+            <div class="form-field">
+              <label>מספר כתובת (מוצא)</label>
+              <input name="מספר_כתובת_מוצא" type="text" placeholder="מספר בית" />
+            </div>
+
+            <div class="form-field">
+              <label>מספר דירה (מוצא)</label>
+              <input name="מספר_דירה_מוצא" type="text" placeholder="מספר דירה" />
             </div>
 
             <div class="form-field">
@@ -1115,9 +1279,25 @@
               </select>
             </div>
 
-            <div class="form-field full-width">
-              <label>יעד מסירה</label>
-              <input name="יעד_מסירה" type="text" placeholder="עיר / כתובת מסירה" />
+            <!-- מסירה: עיר/רחוב/מספר/דירה -->
+            <div class="form-field">
+              <label>עיר יעד</label>
+              <input name="עיר_יעד" type="text" placeholder="עיר מסירה" />
+            </div>
+
+            <div class="form-field">
+              <label>רחוב (יעד)</label>
+              <input name="רחוב_יעד" type="text" placeholder="רחוב" />
+            </div>
+
+            <div class="form-field">
+              <label>מספר כתובת (יעד)</label>
+              <input name="מספר_כתובת_יעד" type="text" placeholder="מספר בית" />
+            </div>
+
+            <div class="form-field">
+              <label>מספר דירה (יעד)</label>
+              <input name="מספר_דירה_יעד" type="text" placeholder="מספר דירה" />
             </div>
 
             <div class="form-field">
@@ -1138,13 +1318,13 @@
 
             <div class="form-field full-width">
               <label>הערות (לא חובה)</label>
-              <textarea name="הערות" placeholder="שעות נוחות, דגשים מיוחדים, פירוק/הרכבה, ציוד רגיש ועוד..." style="min-height:100px; resize:vertical; font-family:inherit;"></textarea>
+              <textarea name="הערות" placeholder="שעות נוחות, הגשים מיוחדים, פירוק/הרכבה, ציוד רגיש ועוד..." style="min-height:100px; resize:vertical;"></textarea>
             </div>
 
             <div class="consent-box full-width">
               <label style="display:flex; gap:10px; align-items:flex-start; cursor:pointer;">
                 <input type="checkbox" required style="margin-top:4px;">
-                <span>אני מאשר/ת יצירת קשר בנוגע לפניה זו ומסכים/ה למדיניות הפרטיות.</span>
+                <span>אני מאשר/ת את <a href="#terms" onclick="document.getElementById('terms').scrollIntoView({behavior:'smooth'})">תקנון האתר</a> ו<a href="#privacy" onclick="document.getElementById('privacy').scrollIntoView({behavior:'smooth'})">מדיניות הפרטיות</a></span>
               </label>
             </div>
 
@@ -1159,72 +1339,182 @@
       </div>
     </section>
 
+    <section class="contact-section" id="terms">
+      <h2 class="section-title">תקנון ותנאי שימוש</h2>
+      <p class="section-subtitle">תנאי השימוש באתר והשירות</p>
+
+      <div class="terms-content">
+        <h3>1. הגדרת השירות</h3>
+        <p>האתר "קליק צ'אק משלוחים" (להלן: "האתר") משמש כפלטפורמת תיווך ודיווח בלבד בין לקוחות לבין שליחים ומובילים עצמאיים. האתר אינו מפעיל שירותי משלוחים או הובלות בעצמו, אינו מעסיק שליחים ואינו מבצע את השירות בפועל.</p>
+
+        <h3>2. העדר אחריות לביצוע השירות</h3>
+        <p>האחריות המלאה והבלעדית על ביצוע השירות, לרבות:</p>
+        <ul>
+          <li>זמני הגעה ואיסוף</li>
+          <li>מסירת המשלוח ביעד</li>
+          <li>נזק, אובדן או פגיעה במוצר</li>
+          <li>איכות השירות והתנהגות השליח</li>
+        </ul>
+        <p>חלה אך ורק על השליח או המוביל המבצע בפועל. האתר ומפעיליו אינם נושאים באחריות כלשהי לכך.</p>
+
+        <h3>3. שירות "AS IS" וללא התחייבות</h3>
+        <p>השירות ניתן "כמות שהוא" (AS IS) וללא כל התחייבות מצד האתר:</p>
+        <ul>
+          <li>שיימצא שליח זמין לביצוע השירות</li>
+          <li>שהשירות יבוצע בזמן מסוים</li>
+          <li>שהמחיר יהיה מסוים או קבוע</li>
+          <li>שהשירות יתאים לצרכי הלקוח</li>
+        </ul>
+
+        <h3>4. הגבלת אחריות ותקרת פיצוי</h3>
+        <p>ככל שייקבע כי קיימת אחריות כלשהי של מפעילי האתר (בניגוד למפורט לעיל), הרי שהאחריות מוגבלת לסכום סמלי בלבד ובכל מקרה לא תעלה על עלות דמי התיווך ששולמו בפועל עבור אותה פנייה ספציפית, אם בכלל.</p>
+
+        <h3>5. החרגת נזקים עקיפים</h3>
+        <p>האתר ומפעיליו לא יישאו בשום מקרה באחריות לנזקים עקיפים, לרבות:</p>
+        <ul>
+          <li>אובדן רווח או הכנסה</li>
+          <li>נזק תדמיתי או מוניטין</li>
+          <li>הפסד עסקי</li>
+          <li>נזק עתידי או נזק לצד שלישי</li>
+        </ul>
+
+        <h3>6. אחריות על נכונות הפרטים</h3>
+        <p>הלקוח אחראי באופן מלא על נכונות ודיוק הפרטים שמוסר, לרבות:</p>
+        <ul>
+          <li>כתובות איסוף ומסירה</li>
+          <li>פרטי התקשרות (טלפון, אימייל)</li>
+          <li>תיאור המשלוח או ההובלה</li>
+          <li>דרישות מיוחדות (קומה, מעלית, משקל וכד')</li>
+        </ul>
+        <p>מסירת פרטים שגויים עלולה להוביל לאי ביצוע התקין של השירות ללא אחריות האתר.</p>
+
+        <h3>7. מדיניות ביטול ושינוי</h3>
+        <p>ביטול פנייה אפשרי רק לפני תיאום סופי עם השליח או המוביל. לאחר העברת הפנייה לשליח והתחלת התהליך, אין התחייבות לאפשרות ביטול או החזר כספי, והנושא כפוף לשיקול דעת השליח בלבד.</p>
+
+        <h3>8. פריטים אסורים</h3>
+        <p>אסור להשתמש בשירות להעברת:</p>
+        <ul>
+          <li>חומרים מסוכנים, דליקים או נפיצים</li>
+          <li>חומרים לא חוקיים או אסורים על פי חוק</li>
+          <li>פריטים בעלי ערך גבוה במיוחד ללא תיאום מוקדם ואישור מפורש</li>
+          <li>בעלי חיים ללא תיאום ואישור</li>
+        </ul>
+        <p>הלקוח נושא באחריות המלאה במקרה של הפרת איסור זה.</p>
+
+        <h3>9. סעיף שיפוי (Indemnity)</h3>
+        <p>הלקוח מתחייב לשפות את מפעילי האתר ולפצותם במלואם בגין כל נזק, הוצאה, תביעה או דרישה שתופנה כלפיהם כתוצאה מ:</p>
+        <ul>
+          <li>שימוש לא נאות של הלקוח בשירות</li>
+          <li>מסירת מידע שגוי או מטעה</li>
+          <li>הפרת תנאי שימוש אלו</li>
+          <li>פעולה או מחדל של השליח/המוביל</li>
+        </ul>
+
+        <h3>10. דין חל, סמכות שיפוט ועדכון תנאים</h3>
+        <p><strong>דין חל:</strong> על תקנון זה יחול הדין הישראלי בלבד.</p>
+        <p><strong>סמכות שיפוט:</strong> סמכות השיפוט הבלעדית תהיה לבתי המשפט המוסמכים בישראל.</p>
+        <p><strong>עדכון תנאים:</strong> האתר שומר לעצמו את הזכות לעדכן תקנון זה מעת לעת. המשך שימוש באתר לאחר עדכון מהווה הסכמה לתנאים המעודכנים.</p>
+
+        <p style="margin-top:2rem; padding-top:2rem; border-top:1px solid var(--border); font-size:0.9rem; color:#94a3b8;">
+          עדכון אחרון: <span style="color:var(--text-light);">16/12/2025</span>
+        </p>
+      </div>
+    </section>
+
     <section class="contact-section" id="privacy">
       <h2 class="section-title">מדיניות פרטיות</h2>
       <p class="section-subtitle">שקיפות היא חלק מהאמינות. כך אנחנו מטפלים בפרטים שנמסרים באתר</p>
 
-      <div style="background:linear-gradient(135deg, rgba(2,6,23,0.95), rgba(15,23,42,0.95)); border:1px solid var(--border); border-radius:20px; padding:2.5rem; box-shadow:0 20px 60px rgba(0,0,0,0.5); color:var(--text-muted); line-height:1.8;">
-        <h3 style="color:var(--primary); margin-bottom:1.5rem; font-size:1.4rem;">בקצרה</h3>
+      <div class="terms-content">
+        <h3>בקצרה</h3>
         <p style="margin-bottom:2rem;">
           האתר אוסף פרטים שמוזנים בטפסים (כגון שם, טלפון, שם העסק ותוכן הודעה) לצורך יצירת קשר ומתן הצעת מחיר/מענה.
           אינכם מחויבים למסור פרטים, אך ללא פרטים לא נוכל לחזור אליכם.
         </p>
 
-        <h3 style="color:var(--primary); margin:2rem 0 1rem; font-size:1.3rem;">איזה מידע נאסף?</h3>
-        <ul style="margin:1rem 0 2rem 2rem; list-style:disc;">
-          <li style="margin-bottom:0.5rem;">פרטים שמוזנים בטופס: שם, טלפון, סוג פניה, סוג שירות, איסוף/מסירה כולל קומה/מעלית, נפח והערות.</li>
-          <li style="margin-bottom:0.5rem;">מידע טכני בסיסי עשוי להיאסף על-ידי ספקי אירוח/אבטחה בהתאם להגדרות השירות.</li>
+        <h3>איזה מידע נאסף?</h3>
+        <ul>
+          <li>פרטים שמוזנים בטופס: שם, טלפון, סוג פניה, סוג שירות, איסוף/מסירה כולל קומה/מעלית, נפח והערות.</li>
+          <li>מידע טכני בסיסי עשוי להיאסף על-ידי ספקי אירוח/אבטחה בהתאם להגדרות השירות.</li>
         </ul>
 
-        <h3 style="color:var(--primary); margin:2rem 0 1rem; font-size:1.3rem;">למה אנחנו משתמשים במידע?</h3>
-        <ul style="margin:1rem 0 2rem 2rem; list-style:disc;">
-          <li style="margin-bottom:0.5rem;">חזרה אליכם, מתן הצעת מחיר ותיאום משלוחים/הובלות.</li>
-          <li style="margin-bottom:0.5rem;">שיפור השירות והתפעול.</li>
+        <h3>למה אנחנו משתמשים במידע?</h3>
+        <ul>
+          <li>חזרה אליכם, מתן הצעת מחיר ותיאום משלוחים/הובלות.</li>
+          <li>שיפור השירות והתפעול.</li>
         </ul>
 
-        <h3 style="color:var(--primary); margin:2rem 0 1rem; font-size:1.3rem;">עם מי המידע משותף?</h3>
-        <ul style="margin:1rem 0 2rem 2rem; list-style:disc;">
-          <li style="margin-bottom:0.5rem;">המידע נגיש לצוות "קליק צ'אק משלוחים" ולספקים טכנולוגיים הנדרשים לתפעול איסוף הלידים (כגון Google).</li>
-          <li style="margin-bottom:0.5rem;">לא נמכור את הפרטים שלכם לצד שלישי לצרכים פרסומיים.</li>
-          <li style="margin-bottom:0.5rem;">ייתכן שיתוף מידע אם נדרש על-פי דין/צו חוקי.</li>
+        <h3>עם מי המידע משותף?</h3>
+        <ul>
+          <li>המידע נגיש לצוות "קליק צ'אק משלוחים" ולספקים טכנולוגיים הנדרשים לתפעול איסוף הלידים (כגון Google).</li>
+          <li>לא נמכור את הפרטים שלכם לצד שלישי לצרכים פרסומיים.</li>
+          <li>ייתכן שיתוף מידע אם נדרש על-פי דין/צו חוקי.</li>
         </ul>
 
-        <h3 style="color:var(--primary); margin:2rem 0 1rem; font-size:1.3rem;">כמה זמן נשמור את המידע?</h3>
+        <h3>כמה זמן נשמור את המידע?</h3>
         <p style="margin-bottom:2rem;">
-          נשמור את המידע למשך הזמן הנדרש לטיפול בפניה ולצרכים תפעוליים, ולאחר מכן נמחק/נבצע אנונימיזציה בהתאם לצורך.
+          נשמור את המידע למשך הזמן הנדרש לטיפול בפנייה ולצרכים תפעוליים, ולאחר מכן נמחק/נבצע אנונימיזציה בהתאם לצורך.
         </p>
 
-        <h3 style="color:var(--primary); margin:2rem 0 1rem; font-size:1.3rem;">אבטחה</h3>
+        <h3>אבטחה</h3>
         <p style="margin-bottom:2rem;">
-          אנו נוקטים אמצעי אבטחה סבירים ומקובלים לצמצום סיכונים, אך חשוב לדעת שאין מערכת חסינה ב-100%.
+          אנו נוקטים אמצעי אבטחה סבירים ומקובלים לצמצום סיכוני, אך חשוב לדעת שאין מערכת חסינה ב-100%.
         </p>
 
-        <h3 style="color:var(--primary); margin:2rem 0 1rem; font-size:1.3rem;">בקשות עיון/תיקון/מחיקה</h3>
+        <h3>בקשות עיון/תיקון/מחיקה</h3>
         <p style="margin-bottom:2rem;">
           ניתן לפנות אלינו בבקשה לעדכון או מחיקת פרטים באמצעות המייל או הטלפון המופיעים בעמוד.
         </p>
 
-        <h3 style="color:var(--primary); margin:2rem 0 1rem; font-size:1.3rem;">יצירת קשר בנושא פרטיות</h3>
+        <h3>יצירת קשר בנושא פרטיות</h3>
         <p style="margin-bottom:1rem;">
           <strong style="color:var(--text-light);">klikchak.mishlohim@gmail.com</strong> | <strong style="color:var(--text-light);">054-6207111</strong>
         </p>
 
         <p style="margin-top:2rem; padding-top:2rem; border-top:1px solid var(--border); font-size:0.9rem; color:#94a3b8;">
-          עדכון אחרון: <span style="color:var(--text-light);">13/12/2025</span>
+          עדכון אחרון: <span style="color:var(--text-light);">16/12/2025</span>
         </p>
       </div>
     </section>
 
     <footer>
       <p>© כל הזכויות שמורות – "קליק צ'אק משלוחים" | חברת משלוחים והובלות קטנות</p>
-      <p style="margin-top:0.5rem;">
-        <a href="mailto:klikchak.mishlohim@gmail.com" style="color:var(--primary)">klikchak.mishlohim@gmail.com</a> | 
-        <a href="tel:+972546207111" style="color:var(--primary)">054-6207111</a>
-      </p>
+      <div class="footer-links">
+        <a href="mailto:klikchak.mishlohim@gmail.com">klikchak.mishlohim@gmail.com</a>
+        <span style="color:var(--border)">|</span>
+        <a href="https://wa.me/972546207111" target="_blank" rel="noopener noreferrer">054-6207111 (WhatsApp)</a>
+        <span style="color:var(--border)">|</span>
+        <a href="#terms" onclick="document.getElementById('terms').scrollIntoView({behavior:'smooth'})">תקנון ותנאי שימוש</a>
+        <span style="color:var(--border)">|</span>
+        <a href="#privacy" onclick="document.getElementById('privacy').scrollIntoView({behavior:'smooth'})">מדיניות פרטיות</a>
+      </div>
     </footer>
   </div>
 
   <script>
+    // WhatsApp options popup
+    function showWhatsAppOptions() {
+      const options = `
+אנא בחר/י את סוג השירות:
+
+1️⃣ משלוחים
+2️⃣ הובלות קטנות
+3️⃣ פניה כללית
+
+לחץ/י OK לבחירת אופציה 1, 2 או 3
+      `.trim();
+      
+      const choice = prompt(options, "1");
+      
+      if (choice === "1") {
+        window.open("https://wa.me/972512040690?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%91%D7%A9%D7%99%D7%A8%D7%95%D7%AA%20%D7%9E%D7%A9%D7%9C%D7%95%D7%97%D7%99%D7%9D", "_blank");
+      } else if (choice === "2") {
+        window.open("https://wa.me/972547152150?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%A6%D7%A8%D7%99%D7%9A%2F%D7%A6%D7%A8%D7%99%D7%9B%D7%94%20%D7%94%D7%95%D7%91%D7%9C%D7%94%20%D7%A7%D7%98%D7%A0%D7%94", "_blank");
+      } else if (choice === "3") {
+        window.open("https://wa.me/972546207111?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%91%D7%A9%D7%99%D7%A8%D7%95%D7%AA", "_blank");
+      }
+    }
+
     // AI Tabs
     const tabs = document.querySelectorAll('.ai-tab');
     const deliveryPanel = document.getElementById('delivery-panel');
@@ -1252,6 +1542,7 @@
     const panelDeliveryVolume = document.getElementById('panel-delivery-volume');
     const panelMoving = document.getElementById('panel-moving');
     const panelMovingVolume = document.getElementById('panel-moving-volume');
+    const panelMovingWeight = document.getElementById('panel-moving-weight');
 
     function syncFormPanels() {
       const service = serviceSelect?.value || '';
@@ -1259,6 +1550,7 @@
 
       if (panelMoving) panelMoving.hidden = !isMoving;
       if (panelMovingVolume) panelMovingVolume.hidden = !isMoving;
+      if (panelMovingWeight) panelMovingWeight.hidden = !isMoving;
       if (panelDelivery) panelDelivery.hidden = isMoving;
       if (panelDeliveryVolume) panelDeliveryVolume.hidden = isMoving;
     }
@@ -1270,22 +1562,26 @@
     const SHEET_URL = "https://script.google.com/macros/s/AKfycbx9U4Y1FO8RlS2tpW3-n7_OWwWFQNi7OKkDI9EmC2Aqg_PPV0X8n2Mag5zXxyj-eSQ8/exec";
 
     document.getElementById('mini-submit')?.addEventListener('click', async () => {
-    const statusEl = document.getElementById('mini-status');
-    
-    // בדיקת אישור מדיניות פרטיות
-    const consentBox = document.getElementById('mini-consent');
-    if (!consentBox.checked) {
-      showStatus(statusEl, "יש לאשר את מדיניות הפרטיות", 'error');
-      return;
-    }
-    
-    const mode = document.querySelector('.ai-tab.active')?.dataset.mode || 'delivery';
-    const data = collectMiniData(mode);
+      const statusEl = document.getElementById('mini-status');
+      
+      const consentBox = document.getElementById('mini-consent');
+      if (!consentBox.checked) {
+        showStatus(statusEl, "יש לאשר את התקנון ומדיניות הפרטיות", 'error');
+        return;
+      }
+      
+      const mode = document.querySelector('.ai-tab.active')?.dataset.mode || 'delivery';
+      const data = collectMiniData(mode);
 
-    if (!data["טלפון_לחזרה"]) {
-      showStatus(statusEl, "חסר טלפון לחזרה", 'error');
-      return;
-    }
+      if (!data["טלפון_לחזרה"]) {
+        showStatus(statusEl, "חסר טלפון לחזרה", 'error');
+        return;
+      }
+
+      if (!data["שם_איש_קשר"]) {
+        showStatus(statusEl, "חסר שם איש קשר", 'error');
+        return;
+      }
 
       showStatus(statusEl, "שולח...", '');
 
@@ -1320,17 +1616,25 @@
           "מקור": "כרטיס AI",
           "תאריך": time,
           "סוג_פניה": "הובלות קטנות",
+          "שם_איש_קשר": document.getElementById('mini-name-move')?.value || '',
+          "טלפון_לחזרה": document.getElementById('mini-phone-move')?.value || '',
+          "אימייל": document.getElementById('mini-email-move')?.value || '',
           "סוג_לקוח": document.getElementById('mini-client-move')?.value || '',
           "נפח": document.getElementById('mini-volume-move')?.value || '',
           "סוג_מוצר": document.getElementById('mini-product-move')?.value || '',
           "משקל_משוער": document.getElementById('mini-weight-move')?.value || '',
-          "יעד_איסוף": document.getElementById('mini-move-pickup-city')?.value || '',
+          "עיר_מוצא": document.getElementById('mini-move-pickup-city')?.value || '',
+          "רחוב_מוצא": document.getElementById('mini-move-pickup-street')?.value || '',
+          "מספר_כתובת_מוצא": document.getElementById('mini-move-pickup-number')?.value || '',
+          "מספר_דירה_מוצא": document.getElementById('mini-move-pickup-apt')?.value || '',
           "קומה_איסוף": document.getElementById('mini-move-pickup-floor')?.value || '',
           "מעלית_איסוף": document.getElementById('mini-move-pickup-elevator')?.value || '',
-          "יעד_מסירה": document.getElementById('mini-move-drop-city')?.value || '',
+          "עיר_יעד": document.getElementById('mini-move-drop-city')?.value || '',
+          "רחוב_יעד": document.getElementById('mini-move-drop-street')?.value || '',
+          "מספר_כתובת_יעד": document.getElementById('mini-move-drop-number')?.value || '',
+          "מספר_דירה_יעד": document.getElementById('mini-move-drop-apt')?.value || '',
           "קומה_מסירה": document.getElementById('mini-move-drop-floor')?.value || '',
           "מעלית_מסירה": document.getElementById('mini-move-drop-elevator')?.value || '',
-          "טלפון_לחזרה": document.getElementById('mini-phone-move')?.value || '',
           "הערות": document.getElementById('mini-notes-move')?.value || ''
         };
       }
@@ -1339,15 +1643,23 @@
         "מקור": "כרטיס AI",
         "תאריך": time,
         "סוג_פניה": "משלוחים",
+        "שם_איש_קשר": document.getElementById('mini-name-del')?.value || '',
+        "טלפון_לחזרה": document.getElementById('mini-phone-del')?.value || '',
+        "אימייל": document.getElementById('mini-email-del')?.value || '',
         "סוג_העסק": document.getElementById('mini-type')?.value || '',
         "נפח_יומי": document.getElementById('mini-volume')?.value || '',
-        "יעד_איסוף": document.getElementById('mini-pickup-city')?.value || '',
+        "עיר_מוצא": document.getElementById('mini-pickup-city')?.value || '',
+        "רחוב_מוצא": document.getElementById('mini-pickup-street')?.value || '',
+        "מספר_כתובת_מוצא": document.getElementById('mini-pickup-number')?.value || '',
+        "מספר_דירה_מוצא": document.getElementById('mini-pickup-apt')?.value || '',
         "קומה_איסוף": document.getElementById('mini-pickup-floor')?.value || '',
         "מעלית_איסוף": document.getElementById('mini-pickup-elevator')?.value || '',
-        "יעד_מסירה": document.getElementById('mini-drop-city')?.value || '',
+        "עיר_יעד": document.getElementById('mini-drop-city')?.value || '',
+        "רחוב_יעד": document.getElementById('mini-drop-street')?.value || '',
+        "מספר_כתובת_יעד": document.getElementById('mini-drop-number')?.value || '',
+        "מספר_דירה_יעד": document.getElementById('mini-drop-apt')?.value || '',
         "קומה_מסירה": document.getElementById('mini-drop-floor')?.value || '',
         "מעלית_מסירה": document.getElementById('mini-drop-elevator')?.value || '',
-        "טלפון_לחזרה": document.getElementById('mini-phone-del')?.value || '',
         "הערות": document.getElementById('mini-notes-del')?.value || ''
       };
     }
@@ -1366,20 +1678,24 @@
         targetPhone = phoneMoving;
         baseText = "שלום, אני צריך/צריכה הובלה קטנה";
 
+        const name = document.getElementById('mini-name-move')?.value || '';
         const phone = document.getElementById('mini-phone-move')?.value || '';
         const client = document.getElementById('mini-client-move')?.value || '';
         const vol = document.getElementById('mini-volume-move')?.value || '';
         const product = document.getElementById('mini-product-move')?.value || '';
 
+        if (name) lines.push("שם: " + name);
         if (phone) lines.push("טלפון לחזרה: " + phone);
         if (client) lines.push("סוג לקוח: " + client);
         if (vol) lines.push("נפח: " + vol);
         if (product) lines.push("סוג מוצר: " + product);
       } else {
+        const name = document.getElementById('mini-name-del')?.value || '';
         const phone = document.getElementById('mini-phone-del')?.value || '';
         const biz = document.getElementById('mini-type')?.value || '';
         const vol = document.getElementById('mini-volume')?.value || '';
 
+        if (name) lines.push("שם: " + name);
         if (phone) lines.push("טלפון לחזרה: " + phone);
         if (biz) lines.push("סוג העסק: " + biz);
         if (vol) lines.push("נפח יומי: " + vol);
@@ -1449,4 +1765,3 @@
     });
   </script>
 </body>
-</html>
