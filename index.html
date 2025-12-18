@@ -1124,19 +1124,9 @@
         </div>
 
         <div class="contact-card">
-          <h3>whatsapp משלוחים</h3>
-          <a href="https://wa.me/972512040690?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%91%D7%A9%D7%99%D7%A8%D7%95%D7%AA%20%D7%9E%D7%A9%D7%9C%D7%95%D7%97%D7%99%D7%9D" target="_blank" rel="noopener noreferrer" class="contact-link">
+          <h3>whatsapp משלוחים והובלות</h3>
+          <a href="https://wa.me/972512040690?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%91%D7%A9%D7%99%D7%A8%D7%95%D7%AA" target="_blank" rel="noopener noreferrer" class="contact-link">
             <span>051-2040690</span>
-            <div class="contact-icon whatsapp">
-              <i class="fab fa-whatsapp"></i>
-            </div>
-          </a>
-        </div>
-
-        <div class="contact-card">
-          <h3>whatsapp הובלות קטנות</h3>
-          <a href="https://wa.me/972547152150?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%A6%D7%A8%D7%99%D7%9A%2F%D7%A6%D7%A8%D7%99%D7%9B%D7%94%20%D7%94%D7%95%D7%91%D7%9C%D7%94%20%D7%A7%D7%98%D7%A0%D7%94" target="_blank" rel="noopener noreferrer" class="contact-link">
-            <span>054-7152150</span>
             <div class="contact-icon whatsapp">
               <i class="fab fa-whatsapp"></i>
             </div>
@@ -1146,7 +1136,7 @@
         <div class="contact-card">
           <h3>מייל</h3>
           <a href="mailto:klikchak.mishlohim@gmail.com" class="contact-link">
-            <span>klikchak.mishlohim@</span>
+            <span>klikchak.mishlohim@gmail.com</span>
             <div class="contact-icon">
               <i class="fas fa-envelope"></i>
             </div>
@@ -1676,42 +1666,39 @@
     // WhatsApp from mini form
     function openWhatsAppFromMini() {
       const mode = document.querySelector('.ai-tab.active')?.dataset.mode || 'delivery';
-      const phoneDelivery = "972512040690";
-      const phoneMoving = "972547152150";
+      const phone = "972512040690"; // מספר אחד לכולם
 
-      let targetPhone = phoneDelivery;
-      let baseText = "שלום, אני מעוניין בשירות משלוחים";
+      let baseText = mode === "moving" ? 
+        "שלום, אני צריך/צריכה הובלה קטנה" : 
+        "שלום, אני מעוניין בשירות משלוחים";
       let lines = [];
 
       if (mode === "moving") {
-        targetPhone = phoneMoving;
-        baseText = "שלום, אני צריך/צריכה הובלה קטנה";
-
         const name = document.getElementById('mini-name-move')?.value || '';
-        const phone = document.getElementById('mini-phone-move')?.value || '';
+        const phoneNum = document.getElementById('mini-phone-move')?.value || '';
         const client = document.getElementById('mini-client-move')?.value || '';
         const vol = document.getElementById('mini-volume-move')?.value || '';
         const product = document.getElementById('mini-product-move')?.value || '';
 
         if (name) lines.push("שם: " + name);
-        if (phone) lines.push("טלפון לחזרה: " + phone);
+        if (phoneNum) lines.push("טלפון לחזרה: " + phoneNum);
         if (client) lines.push("סוג לקוח: " + client);
         if (vol) lines.push("נפח: " + vol);
         if (product) lines.push("סוג מוצר: " + product);
       } else {
         const name = document.getElementById('mini-name-del')?.value || '';
-        const phone = document.getElementById('mini-phone-del')?.value || '';
+        const phoneNum = document.getElementById('mini-phone-del')?.value || '';
         const biz = document.getElementById('mini-type')?.value || '';
         const vol = document.getElementById('mini-volume')?.value || '';
 
         if (name) lines.push("שם: " + name);
-        if (phone) lines.push("טלפון לחזרה: " + phone);
+        if (phoneNum) lines.push("טלפון לחזרה: " + phoneNum);
         if (biz) lines.push("סוג העסק: " + biz);
         if (vol) lines.push("נפח יומי: " + vol);
       }
 
       const fullText = baseText + "\n\n" + lines.join("\n");
-      const url = "https://wa.me/" + targetPhone + "?text=" + encodeURIComponent(fullText);
+      const url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(fullText);
       window.open(url, "_blank", "noopener,noreferrer");
     }
 
@@ -1723,9 +1710,7 @@
         return;
       }
 
-      const phoneDelivery = "972512040690";
-      const phoneMoving = "972547152150";
-      const targetPhone = service === "הובלות קטנות" ? phoneMoving : phoneDelivery;
+      const phone = "972512040690"; // מספר אחד לכולם
 
       const formData = new FormData(document.getElementById('mainForm'));
       let text = service === "הובלות קטנות" ? 
@@ -1738,7 +1723,7 @@
         }
       }
 
-      const url = "https://wa.me/" + targetPhone + "?text=" + encodeURIComponent(text);
+      const url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(text);
       window.open(url, "_blank", "noopener,noreferrer");
     }
 
